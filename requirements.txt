@@ -1,0 +1,28 @@
+# ── Core ──────────────────────────────────────────────────────
+customtkinter==5.2.2        # Interface gráfica moderna (Tk wrapper)
+Pillow==10.4.0              # Manipulação de imagens (logo, ícones)
+python-dotenv==1.0.1        # Carregamento de variáveis de ambiente (.env)
+
+# ── Audio (a ser implementado) ────────────────────────────────
+# sounddevice==0.4.7        # Captura e reprodução de áudio em tempo real
+# pyaudio==0.2.14           # Alternativa ao sounddevice
+
+# ── Speech Recognition (a ser implementado) ──────────────────
+# openai-whisper==20231117  # Reconhecimento de fala local (OpenAI Whisper)
+# faster-whisper==1.0.3     # Versão otimizada do Whisper com CTranslate2
+
+# ── Translation (a ser implementado) ─────────────────────────
+# deep-translator==1.11.4   # Wrapper de múltiplos motores de tradução
+# openai==1.40.0            # API OpenAI (GPT para tradução avançada)
+
+# ── TTS (a ser implementado) ──────────────────────────────────
+# pyttsx3==2.90             # Text-to-Speech local, sem API
+# elevenlabs==1.3.0         # TTS com voz realista via API ElevenLabs
+
+# ── Virtual Audio (a ser implementado) ───────────────────────
+# pycaw==20240210           # Controle de áudio no Windows (Core Audio API)
+
+# ── Dev / Quality ─────────────────────────────────────────────
+# pytest==8.3.3             # Framework de testes
+# ruff==0.6.9               # Linter e formatter (substitui flake8 + black)
+# mypy==1.11.2              # Verificação estática de tipos

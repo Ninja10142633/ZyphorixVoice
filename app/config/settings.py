@@ -1,0 +1,60 @@
+"""
+Configurações centrais da aplicação ZyphorixVoice.
+
+Carrega variáveis do arquivo .env e expõe um objeto de configuração
+imutável para ser consumido por qualquer módulo da aplicação.
+"""
+
+import os
+from dataclasses import dataclass, field
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+
+# Carrega o .env da raiz do projeto
+_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
+load_dotenv(dotenv_path=_ENV_PATH)
+
+
+@dataclass(frozen=True)
+class AppSettings:
+    """Configurações gerais da aplicação."""
+
+    app_name: str = "ZyphorixVoice"
+    version: str = "0.1.0"
+    debug: bool = field(default_factory=lambda: os.getenv("DEBUG", "false").lower() == "true")
+
+
+@dataclass(frozen=True)
+class AudioSettings:
+    """Configurações de dispositivos de áudio (a serem populadas futuramente)."""
+
+    default_microphone: str = field(
+        default_factory=lambda: os.getenv("DEFAULT_MICROPHONE", "Microfone padrão do sistema")
+    )
+    sample_rate: int = 16000
+    channels: int = 1
+    chunk_size: int = 1024
+
+
+@dataclass(frozen=True)
+class TranslationSettings:
+    """Configurações do serviço de tradução (a ser implementado)."""
+
+    source_language: str = field(default_factory=lambda: os.getenv("SOURCE_LANG", "pt"))
+    target_language: str = field(default_factory=lambda: os.getenv("TARGET_LANG", "en"))
+    engine: str = field(default_factory=lambda: os.getenv("TRANSLATION_ENGINE", "none"))
+
+
+@dataclass(frozen=True)
+class Settings:
+    """Objeto raiz de configuração da aplicação."""
+
+    app: AppSettings = field(default_factory=AppSettings)
+    audio: AudioSettings = field(default_factory=AudioSettings)
+    translation: TranslationSettings = field(default_factory=TranslationSettings)
+
+
+# Instância global — importar e usar diretamente nos módulos
+settings = Settings()

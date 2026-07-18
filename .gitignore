@@ -1,0 +1,51 @@
+# ZyphorixVoice
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Ambiente virtual ──────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Variáveis de ambiente (NUNCA commitar o .env real) ────────
+.env
+
+# ── Logs gerados ──────────────────────────────────────────────
+logs/*.log
+logs/*.log.*
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ── Sistema operacional ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Modelos de IA (grandes demais para o repositório) ─────────
+models/
+*.pt
+*.bin
+*.gguf
+
+# ── Cobertura de testes ───────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ── Mypy ─────────────────────────────────────────────────────
+.mypy_cache/
