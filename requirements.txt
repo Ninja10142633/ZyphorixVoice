@@ -1,28 +1,31 @@
 # ── Core ──────────────────────────────────────────────────────
-customtkinter==5.2.2        # Interface gráfica moderna (Tk wrapper)
-Pillow==10.4.0              # Manipulação de imagens (logo, ícones)
-python-dotenv==1.0.1        # Carregamento de variáveis de ambiente (.env)
+customtkinter==6.0.0        # Interface gráfica moderna (Tk wrapper)
+Pillow==12.3.0              # Manipulação de imagens (logo, ícones)
+python-dotenv==1.2.2        # Carregamento de variáveis de ambiente (.env)
 
-# ── Audio (a ser implementado) ────────────────────────────────
-# sounddevice==0.4.7        # Captura e reprodução de áudio em tempo real
+# ── Audio (v0.2.0) ─────────────────────────────────────────────
+sounddevice==0.5.5          # Captura e listagem de dispositivos de áudio
+numpy==2.5.1                # Cálculo de nível RMS para o VU Meter
+
+# ── Audio (alternativas, a avaliar) ──────────────────────────
 # pyaudio==0.2.14           # Alternativa ao sounddevice
 
-# ── Speech Recognition (a ser implementado) ──────────────────
+# ── Speech Recognition (v0.3.0) ──────────────────────────────
 # openai-whisper==20231117  # Reconhecimento de fala local (OpenAI Whisper)
 # faster-whisper==1.0.3     # Versão otimizada do Whisper com CTranslate2
 
-# ── Translation (a ser implementado) ─────────────────────────
+# ── Translation (v0.4.0) ─────────────────────────────────────
 # deep-translator==1.11.4   # Wrapper de múltiplos motores de tradução
 # openai==1.40.0            # API OpenAI (GPT para tradução avançada)
 
-# ── TTS (a ser implementado) ──────────────────────────────────
+# ── TTS (v0.5.0) ──────────────────────────────────────────────
 # pyttsx3==2.90             # Text-to-Speech local, sem API
 # elevenlabs==1.3.0         # TTS com voz realista via API ElevenLabs
 
-# ── Virtual Audio (a ser implementado) ───────────────────────
+# ── Virtual Audio (v0.6.0) ───────────────────────────────────
 # pycaw==20240210           # Controle de áudio no Windows (Core Audio API)
 
 # ── Dev / Quality ─────────────────────────────────────────────
 # pytest==8.3.3             # Framework de testes
-# ruff==0.6.9               # Linter e formatter (substitui flake8 + black)
+# ruff==0.6.9               # Linter e formatter
 # mypy==1.11.2              # Verificação estática de tipos

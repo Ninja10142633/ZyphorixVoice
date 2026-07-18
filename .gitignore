@@ -21,6 +21,9 @@ ENV/
 # ── Variáveis de ambiente (NUNCA commitar o .env real) ────────
 .env
 
+# Preferências do usuário (dispositivos, idiomas) ─────────────
+user_prefs.json
+
 # ── Logs gerados ──────────────────────────────────────────────
 logs/*.log
 logs/*.log.*
